@@ -1,3 +1,108 @@
+//colors
+$primary-grey: #1e212c;
+$secondary-grey: #363d4d;
+$tertiary-blue: #bfebfe;
+$text-grey: #9a9ea6;
+$text-light: #fff;
+$lcms-green: #36d62e;
+$lcms-blue: #00adfc;
+$lcms-purple: #8c03ff;
+$lcms-pink: #ff00f5;
+
+// global styles
 body {
-    background-color: yellow;
+    background-color: #fff;
+    margin: 0;
+}
+
+// font styles
+.CLASS-section-header {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 200;
+    font-size: 34px;
+    color: $text-light;
+    &.center {
+        text-align: center;
+    }
+    &.left {
+        text-align: left;
+    }
+}
+
+.CLASS-security-header {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: $text-light;
+    letter-spacing: 3px;
+    text-align: left;
+    margin: 0;
+}
+
+.CLASS-security-subheader {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 300;
+    font-size: 29px;
+    text-align: left;
+    margin: -12px 0 0 0;
+    &.green {
+        color: $lcms-green;
+    }
+    &.blue {
+        color: $lcms-blue;
+    }
+    &.pink {
+        color: $lcms-pink;
+    }
+}
+
+.CLASS-services-body {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: left;
+    line-height: 1.5;
+    margin: 0;
+    color: $text-grey;
+}
+
+// block styles
+.CLASS-lcms-section {
+    padding: 100px 15vw;
+    &.primary {
+        background-color: $primary-grey;
+    }
+    &.secondary {
+        background-color: $secondary-grey;
+    }
+    &.tertiary {
+        background-color: $tertiary-blue;
+        h1 {
+            color: $primary-grey;
+        }
+    }
+    h1 {
+        @extend .CLASS-section-header;
+    }
+    @media screen and (max-width: 992px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+.lcms-section {
+    @extend .CLASS-lcms-section;
+}
+
+// sections
+.services {
+    h2 {
+        @extend .CLASS-security-header;
+    }
+    h3 {
+        @extend .CLASS-security-subheader;
+    }
+    p {
+        @extend .CLASS-services-body;
+    }
 }
