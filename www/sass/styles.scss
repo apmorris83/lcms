@@ -94,6 +94,30 @@ body {
     @extend .CLASS-lcms-section;
 }
 
+.lcms-header {
+    background-color: $primary-grey;
+    padding: 10px 15vw;
+    height: 40px;
+    .nav-logo {
+        width: 50px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.nav-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
 // sections
 .services {
     h2 {
