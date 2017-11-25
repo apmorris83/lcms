@@ -43,6 +43,15 @@ body {
   margin: 0;
   color: #9a9ea6; }
 
+.CLASS-nav-body, .lcms-header .nav-menu li {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: left;
+  line-height: 1.5;
+  margin: 0;
+  color: #9a9ea6; }
+
 .CLASS-lcms-section, .lcms-section {
   padding: 100px 15vw; }
   .CLASS-lcms-section.primary, .primary.lcms-section {
@@ -67,11 +76,27 @@ body {
     position: relative;
     top: 50%;
     transform: translateY(-50%); }
+  .lcms-header .nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right; }
+    .lcms-header .nav-menu li {
+      display: inline-block;
+      margin-top: 9px;
+      margin-left: 21px; }
+      .lcms-header .nav-menu li a {
+        text-decoration: none; }
+        .lcms-header .nav-menu li a:hover {
+          color: #fff !important;
+          transition: color 0.2s ease-in-out; }
+        .lcms-header .nav-menu li a:visited {
+          color: inherit; }
 
 .nav-fixed {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 70%;
   animation: fadeIn 0.5s; }
 
 @keyframes fadeIn {

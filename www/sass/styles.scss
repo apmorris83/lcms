@@ -66,6 +66,16 @@ body {
     color: $text-grey;
 }
 
+.CLASS-nav-body {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: left;
+    line-height: 1.5;
+    margin: 0;
+    color: $text-grey;
+}
+
 // block styles
 .CLASS-lcms-section {
     padding: 100px 15vw;
@@ -104,12 +114,34 @@ body {
         top: 50%;
         transform: translateY(-50%);
     }
+    .nav-menu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        float: right;
+        li {
+            display: inline-block;
+            margin-top: 9px;
+            margin-left: 21px;
+            @extend .CLASS-nav-body;
+            a {
+                text-decoration: none;
+                &:hover {
+                    color: $text-light !important;
+                    transition: color 0.2s ease-in-out;
+                }
+                &:visited {
+                    color: inherit;
+                }
+            }
+        }
+    }
 }
 
 .nav-fixed {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 70%;
     animation: fadeIn 0.5s;
 }
 
