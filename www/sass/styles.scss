@@ -36,7 +36,6 @@ body {
     color: $text-light;
     letter-spacing: 3px;
     text-align: left;
-    margin: 0;
 }
 
 .CLASS-security-subheader {
@@ -134,6 +133,10 @@ body {
                     color: inherit;
                 }
             }
+            .button-link {
+                background-color: $tertiary-blue;
+                border: 1px solid #fff;
+            }
         }
     }
 }
@@ -152,13 +155,26 @@ body {
 
 // sections
 .services {
-    h2 {
-        @extend .CLASS-security-header;
-    }
-    h3 {
-        @extend .CLASS-security-subheader;
-    }
     p {
         @extend .CLASS-services-body;
+    }
+    .services-container {
+        .security {
+            @extend .CLASS-security-header;
+        }
+        .service {
+            @extend .CLASS-security-subheader;
+        }
+        .services-image {
+            display: inline-block;
+            img {
+                width: 65px;
+                height: 65px;
+                margin-right: 10px;
+            }
+        }
+        .services-header {
+            display: inline-block;
+        }
     }
 }
