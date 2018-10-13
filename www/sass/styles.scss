@@ -22,11 +22,15 @@ h1 {
     font-weight: 200;
     font-size: 34px;
     color: $text-light;
-    line-height: 1;
+    line-height: 1.3;
     margin: 0 0 60px 0;
 
     &.center {
         text-align: center;
+    }
+
+    &.dark{
+        color: $primary-grey;
     }
 
     @media screen and (max-width: 991px){
@@ -45,6 +49,11 @@ h3{
     &.service{
         margin-left: 3px;
         letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+
+    &.dark{
+        color: $primary-grey;
     }
 
     @media screen and (max-width: 991px){
@@ -75,8 +84,32 @@ h4{
         color: $lcms-pink;
     }
 
+    &.get-in-touch{
+        font-size: 28px;
+        color: $primary-grey;
+        font-weight: 400;
+        margin-top: -30px;
+    }
+
+    &.contact-detail{
+        font-size: 25px;
+        color: $primary-grey;
+        font-weight: 300;
+        margin: 0;
+    }
+
     @media screen and (max-width: 991px){
         font-size: 24px;
+
+        &.get-in-touch{
+            font-size: 20px;
+            margin-top: -10px;
+        }
+
+        &.contact-detail{
+            font-size: 18px;
+            margin: 0;
+        }
     }
 }
 
@@ -87,6 +120,17 @@ p{
     line-height: 1.5;
     margin: 0;
     color: $text-grey;
+
+    &.large{
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
+    @media screen and (max-width: 991px){
+        &.large{
+            font-size: 18px;
+        }
+    }
 }
 
 .CLASS-nav-body {
@@ -102,7 +146,7 @@ p{
 // block styles
 .lcms-section {
     width: 100%;
-    padding: 100px 18px;
+    padding: 100px 18px 120px 18px;
     box-sizing: border-box;
 
     &.header{
@@ -135,10 +179,46 @@ p{
         // border: 1px solid white;
         position: relative;
         z-index: 2;
+
+        .contact-details-container{
+            width: 100%;
+            max-width: 720px;
+            margin: 60px auto 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .contact-block{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                .icon{
+                    height: 65px;
+                    margin-right: 10px;
+                }
+            }
+        }
     }
     
     @media screen and (max-width: 991px) {
         padding: 60px 18px 70px 18px;
+
+        .content-container{
+            .contact-details-container{
+                display: block;
+
+                .contact-block{
+                    .icon{
+                        height: 50px;
+                    }
+
+                    &:last-child{
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -218,6 +298,11 @@ p{
         .content-column{
             width: 320px;
             margin: 0 20px;
+            position: relative;
+
+            &.two-cols{
+                width: 710px;
+            }
 
             .service-header-block{
                 display: flex;
@@ -233,6 +318,37 @@ p{
 
                 }
             }
+
+            ul{
+                margin: -32px 0 0 0;
+                padding-left: 0;
+                position: relative;
+                z-index: 2;
+
+                li{
+                    font-family: 'Cairo', sans-serif;
+                    font-weight: 700;
+                    font-size: 18px;
+                    color: $tertiary-blue;
+                    margin: 0;
+                    list-style-type: none;
+                    line-height: 1.1;
+                    background: url('/images/bullet-point.svg') no-repeat left top;
+                    height: 20px;
+                    padding-left: 30px;
+                    margin-top: 36px;
+                }
+            }
+
+            .line{
+                width: 2px;
+                height: 450px;
+                background-color: $tertiary-blue;
+                position: absolute;
+                top: 10px;
+                left: 9px;
+                z-index: 1;
+            }
         }
     }
 
@@ -243,6 +359,10 @@ p{
             .content-column{
                 width: 100%;
                 margin: 0 0 60px 0;
+
+                &.two-cols{
+                    width: 100%;
+                }
 
                 &:last-child{
                     margin-bottom: 0;
