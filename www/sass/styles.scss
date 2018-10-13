@@ -52,6 +52,10 @@ h3{
         text-transform: uppercase;
     }
 
+    &.about{
+        font-size: 18px;
+    }
+
     &.dark{
         color: $primary-grey;
     }
