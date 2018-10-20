@@ -91,20 +91,13 @@ p {
     max-width: 450px; }
   @media screen and (max-width: 991px) {
     p.large {
-      font-size: 14px; } }
-
-.CLASS-nav-body, .header .nav-menu li {
-  font-family: 'Cairo', sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  text-align: left;
-  line-height: 1.5;
-  margin: 0;
-  color: #9a9ea6; }
+      font-size: 14px; }
+    p.footer {
+      max-width: 100%; } }
 
 .lcms-section {
   width: 100%;
-  padding: 100px 18px 120px 18px;
+  padding: 100px 18px 130px 18px;
   box-sizing: border-box; }
   .lcms-section.header {
     padding: 10px 18px; }
@@ -115,7 +108,7 @@ p {
   .lcms-section.tertiary {
     background-color: #bfebfe; }
   .lcms-section.black {
-    background-color: #000; }
+    background-color: #020203; }
   .lcms-section .content-container {
     width: 100%;
     max-width: 1260px;
@@ -149,39 +142,12 @@ p {
         .lcms-section .content-container .contact-details-container .contact-block:last-child {
           margin-top: 20px; } }
 
-.header {
-  background-color: #1e212c;
-  height: 40px; }
-  .header .nav-logo {
-    width: 50px;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%); }
-  .header .nav-menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    float: right; }
-    .header .nav-menu li {
-      display: inline-block;
-      margin-top: 9px;
-      margin-left: 21px; }
-      .header .nav-menu li a {
-        text-decoration: none; }
-        .header .nav-menu li a:hover {
-          color: #fff !important;
-          transition: color 0.2s ease-in-out; }
-        .header .nav-menu li a:visited {
-          color: inherit; }
-      .header .nav-menu li .button-link {
-        background-color: #bfebfe;
-        border: 1px solid #fff; }
-
 .hero {
-  height: 54vw;
-  position: relative; }
+  height: 480px;
+  position: relative;
+  padding: 100px 18px 0 18px; }
   .hero .logo {
-    width: 180px;
+    width: 130px;
     margin-bottom: 40px; }
   .hero .hero-image {
     position: absolute;
@@ -190,11 +156,22 @@ p {
     transform: translateX(-50%);
     width: 100%;
     overflow: hidden; }
-  @media screen and (max-width: 991px) {
+  @media screen and (min-width: 768px) {
     .hero {
-      height: 400px; }
+      height: 570px; } }
+  @media screen and (min-width: 991px) {
+    .hero {
+      height: 680px; }
       .hero .logo {
-        width: 130px; } }
+        width: 180px; } }
+  @media screen and (min-width: 1200px) {
+    .hero {
+      height: 60vw;
+      padding-top: 150px; } }
+  @media screen and (min-width: 1440px) {
+    .hero {
+      height: 50vw;
+      padding-top: 200px; } }
 
 .services .content-container {
   flex-direction: row;
@@ -291,27 +268,15 @@ p {
   @media screen and (max-width: 991px) {
     .lcms-nav {
       padding: 40px 18px; }
-      .lcms-nav .footer-container {
+      .lcms-nav .nav-container {
         display: block; }
-        .lcms-nav .footer-container .social-media-container {
+        .lcms-nav .nav-container .social-media-container {
           margin-left: 0;
           margin-top: 30px;
-          width: 92px; }
-          .lcms-nav .footer-container .social-media-container .social-logo {
-            width: 36px;
-            height: 36px; } }
-
-.nav-fixed {
-  position: fixed;
-  top: 0;
-  width: 70%;
-  animation: fadeIn 0.5s; }
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
+          width: 80px; }
+          .lcms-nav .nav-container .social-media-container .social-logo {
+            width: 30px;
+            height: 30px; } }
 
 .lcms-button {
   font-family: 'Cairo', sans-serif;
@@ -335,9 +300,11 @@ p {
     padding: 5px 20px;
     font-size: 14px; }
   @media screen and (max-width: 991px) {
-    .lcms-button.small {
-      padding: 12px 40px;
-      font-size: 16px; } }
+    .lcms-button {
+      padding: 10px 25px; }
+      .lcms-button.small {
+        padding: 10px 25px;
+        font-size: 16px; } }
 
 .margin-top-sm {
   margin-top: 10px; }

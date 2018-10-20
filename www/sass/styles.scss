@@ -8,7 +8,7 @@ $lcms-green: #36d62e;
 $lcms-blue: #00adfc;
 $lcms-purple: #8c03ff;
 $lcms-pink: #ff00f5;
-$black: #000;
+$black: #020203;
 
 // global styles
 body {
@@ -151,23 +151,17 @@ p{
         &.large{
             font-size: 14px;
         }
-    }
-}
 
-.CLASS-nav-body {
-    font-family: 'Cairo', sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    text-align: left;
-    line-height: 1.5;
-    margin: 0;
-    color: $text-grey;
+        &.footer{
+            max-width: 100%;
+        }
+    }
 }
 
 // block styles
 .lcms-section {
     width: 100%;
-    padding: 100px 18px 120px 18px;
+    padding: 100px 18px 130px 18px;
     box-sizing: border-box;
 
     &.header{
@@ -244,50 +238,13 @@ p{
 }
 
 // sections
-.header {
-    background-color: $primary-grey;
-    height: 40px;
-
-    .nav-logo {
-        width: 50px;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    .nav-menu {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        float: right;
-        li {
-            display: inline-block;
-            margin-top: 9px;
-            margin-left: 21px;
-            @extend .CLASS-nav-body;
-            a {
-                text-decoration: none;
-                &:hover {
-                    color: $text-light !important;
-                    transition: color 0.2s ease-in-out;
-                }
-                &:visited {
-                    color: inherit;
-                }
-            }
-            .button-link {
-                background-color: $tertiary-blue;
-                border: 1px solid #fff;
-            }
-        }
-    }
-}
-
 .hero{
-    height: 54vw;
+    height: 480px;
     position: relative;
+    padding: 100px 18px 0 18px;
 
     .logo{
-        width: 180px;
+        width: 130px;
         margin-bottom: 40px;
     }
 
@@ -300,12 +257,26 @@ p{
         overflow: hidden;
     }
 
-    @media screen and (max-width: 991px){
-        height: 400px;
+    @media screen and (min-width: 768px){ // screens over 768px
+        height: 570px;
+    }
+
+    @media screen and (min-width: 991px){ // screens over 991px
+        height: 680px;
 
         .logo{
-            width: 130px;
+            width: 180px;
         }
+    }
+
+    @media screen and (min-width: 1200px){ // screens over 1200px
+        height: 60vw;
+        padding-top: 150px;
+    }
+
+    @media screen and (min-width: 1440px){ // screens over 1440px
+        height: 50vw;
+        padding-top: 200px;
     }
 }
 
@@ -401,7 +372,7 @@ p{
     }
 }
 
-// footer
+// footer / header
 .lcms-nav{
     width: 100%;
     padding: 20px 18px;
@@ -453,34 +424,21 @@ p{
     @media screen and (max-width: 991px){
         padding: 40px 18px;
 
-        .footer-container{
+        .nav-container{
             display: block;
 
             .social-media-container{
                 margin-left: 0;
                 margin-top: 30px;
-                width: 92px;
+                width: 80px;
 
                 .social-logo{
-                    width: 36px;
-                    height: 36px;
+                    width: 30px;
+                    height: 30px;
                 }
             }
         }
     }
-}
-
-// nav
-.nav-fixed {
-    position: fixed;
-    top: 0;
-    width: 70%;
-    animation: fadeIn 0.5s;
-}
-
-@keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
 }
 
 // buttons 
@@ -513,8 +471,10 @@ p{
     }
 
     @media screen and (max-width: 991px){
+        padding: 10px 25px;
+
         &.small{
-            padding: 12px 40px;
+            padding: 10px 25px;
             font-size: 16px;
         }
     }
