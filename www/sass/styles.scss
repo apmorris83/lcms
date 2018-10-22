@@ -321,7 +321,7 @@ p{
                     margin: 0;
                     list-style-type: none;
                     line-height: 1.1;
-                    background: url('/images/bullet-point.svg') no-repeat left top;
+                    background: url('https://s3-eu-west-1.amazonaws.com/lcms-test-site/bullet-point.svg') no-repeat left top;
                     height: 20px;
                     padding-left: 30px;
                     margin-top: 36px;
@@ -454,6 +454,7 @@ p{
     background-color: $tertiary-blue;
     cursor: pointer;
     transition: 0.2s;
+    border: none;
 
     &:active,&:focus{
         outline: none;
