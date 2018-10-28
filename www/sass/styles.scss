@@ -471,12 +471,31 @@ p{
         font-size: 14px;
     }
 
+    &.footer{
+        border: 1px solid $text-grey;
+        color: $text-grey;
+        background-color: $primary-grey;
+
+        &:hover{
+            border: 1px solid $tertiary-blue;
+            background-color: $tertiary-blue;
+            color: $primary-grey;
+            box-shadow: none;
+            transform: none;
+            opacity: 1;
+        }
+    }
+
     @media screen and (max-width: 991px){
         padding: 10px 25px;
 
         &.small{
             padding: 10px 25px;
             font-size: 16px;
+        }
+
+        &.footer{
+            margin-top: 20px;
         }
     }
 }

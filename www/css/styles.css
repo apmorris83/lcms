@@ -300,12 +300,25 @@ p {
   .lcms-button.small {
     padding: 5px 20px;
     font-size: 14px; }
+  .lcms-button.footer {
+    border: 1px solid #9a9ea6;
+    color: #9a9ea6;
+    background-color: #1e212c; }
+    .lcms-button.footer:hover {
+      border: 1px solid #bfebfe;
+      background-color: #bfebfe;
+      color: #1e212c;
+      box-shadow: none;
+      transform: none;
+      opacity: 1; }
   @media screen and (max-width: 991px) {
     .lcms-button {
       padding: 10px 25px; }
       .lcms-button.small {
         padding: 10px 25px;
-        font-size: 16px; } }
+        font-size: 16px; }
+      .lcms-button.footer {
+        margin-top: 20px; } }
 
 .margin-top-sm {
   margin-top: 10px; }
